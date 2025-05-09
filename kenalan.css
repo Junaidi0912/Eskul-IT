@@ -1,126 +1,105 @@
 :root {
-    --biru-utama: #2563eb;
-    --biru-kedua: #3b82f6;
-    --biru-lembut: #dbeafe;
-    --biru-tua: #1e40af;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-  }
-  
-  body {
-    background-color: #f8fafc;
-    color: #1e293b;
-    line-height: 1.6;
-  }
-  
-  @keyframes fadeInUp {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
+      --biru-utama: #2563eb;
+      --biru-kedua: #3b82f6;
+      --biru-lembut: #dbeafe;
+      --biru-tua: #1e40af;
     }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
-  }
-  
-  .bengkok-atas {
-    background: linear-gradient(135deg, var(--biru-utama), var(--biru-tua));
-    color: white;
-    padding: 4rem 0;
-    text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    animation: fadeInUp 0.8s ease-out forwards;
-  }
-  
-  .bengkok-atas h1 {
-    font-size: 3rem;
-    font-weight: 800;
-  }
-  
-  .bengkok-atas p {
-    font-size: 1.25rem;
-    max-width: 700px;
-    margin: 0 auto;
-    opacity: 0.95;
-  }
-  
-  .bungkus {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .isi-konten {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 2rem;
-    animation: fadeInUp 1s ease-out forwards;
-    animation-delay: 0.2s;
-  }
-  
-  .kartu-cerita {
-    background: white;
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid var(--biru-utama);
-    animation: fadeInUp 1.2s ease-out forwards;
-    animation-delay: 0.4s;
-  }
-  
-  .kartu-cerita h2 {
-    color: var(--biru-utama);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-  }
-  
-  .kartu-cerita p,
-  .kartu-cerita ul {
-    font-size: 1.1rem;
-  }
-  
-  .kartu-cerita ul {
-    padding-left: 1.5rem;
-  }
-  
-  .kartu-cerita li {
-    margin-bottom: 0.5rem;
-    position: relative;
-  }
-  
-  .kartu-cerita li::before {
-    content: "▹";
-    color: var(--biru-kedua);
-    position: absolute;
-    left: -1.5rem;
-  }
-  
-  .kotak-text {
-    background-color: var(--biru-lembut);
-    border-left: 4px solid var(--biru-kedua);
-    padding: 1rem;
-    border-radius: 0 8px 8px 0;
-    margin: 1.5rem 0;
-    font-style: italic;
-    color: var(--biru-tua);
-    font-weight: 500;
-    animation: fadeInUp 1.3s ease-out forwards;
-    animation-delay: 0.6s;
-  }
-  
-  .footer {
-    background: #003366;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    animation: fadeInUp 1.5s ease-out forwards;
-    animation-delay: 0.8s;
-  }
-  
+
+    body {
+      background-color: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+    }
+
+    .bungkus {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .bengkok-atas {
+      background: linear-gradient(135deg, var(--biru-utama), var(--biru-tua));
+      color: white;
+      padding: 4rem 0;
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .bengkok-atas h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    .bengkok-atas p {
+      font-size: 1.25rem;
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    .isi-konten {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .kartu-cerita {
+      background: white;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border-left: 4px solid var(--biru-utama);
+    }
+
+    .kartu-cerita h2 {
+      color: var(--biru-utama);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .kartu-cerita p,
+    .kartu-cerita ul {
+      font-size: 1.1rem;
+    }
+
+    .kartu-cerita ul {
+      padding-left: 1.5rem;
+    }
+
+    .kartu-cerita li {
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .kartu-cerita li::before {
+      content: "▹";
+      color: var(--biru-kedua);
+      position: absolute;
+      left: -1.5rem;
+    }
+
+    .kotak-text {
+      background-color: var(--biru-lembut);
+      border-left: 4px solid var(--biru-kedua);
+      padding: 1rem;
+      border-radius: 0 8px 8px 0;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--biru-tua);
+      font-weight: 500;
+    }
+
+    .footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
