@@ -1,0 +1,148 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f9ff;
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    nav {
+      background-color: #003366;
+      color: white;
+      padding: 1.2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: linear-gradient(135deg, #0077cc, #00bfff);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      z-index: 2;
+      position: relative;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #ffffff;
+      color: #0077cc;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+      z-index: 2;
+      position: relative;
+    }
+
+    .cta-button:hover {
+      background-color: #e0f0ff;
+    }
+
+    .circles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .circles div {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      animation: float 15s infinite;
+      opacity: 0.6;
+    }
+
+    .circles div:nth-child(1) {
+      width: 100px;
+      height: 100px;
+      left: 10%;
+      top: 80%;
+      animation-delay: 0s;
+    }
+
+    .circles div:nth-child(2) {
+      width: 150px;
+      height: 150px;
+      left: 70%;
+      top: 90%;
+      animation-delay: 3s;
+    }
+
+    .circles div:nth-child(3) {
+      width: 80px;
+      height: 80px;
+      left: 50%;
+      top: 100%;
+      animation-delay: 5s;
+    }
+
+    .circles div:nth-child(4) {
+      width: 120px;
+      height: 120px;
+      left: 30%;
+      top: 95%;
+      animation-delay: 7s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translateY(-300px) scale(1.2);
+        opacity: 0.3;
+      }
+      100% {
+        transform: translateY(-600px) scale(1);
+        opacity: 0;
+      }
+    }
+
+    footer {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    .logo {
+        height: 40px;
+    }
