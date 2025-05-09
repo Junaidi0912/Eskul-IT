@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  body {
+    background: linear-gradient(to bottom right, #007bff, #00bfff);
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    z-index: 0;
+    animation: float 8s ease-in-out infinite alternate;
+  }
+
+  .blob1 {
+    width: 300px;
+    height: 300px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .blob2 {
+    width: 400px;
+    height: 400px;
+    bottom: -150px;
+    right: -150px;
+  }
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(30px); }
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    z-index: 1;
+  }
+
+  .kartu-link {
+    text-decoration: none;
+    color: inherit;
+    perspective: 1000px;
+  }
+
+  .kartu {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 123, 255, 0.15);
+    width: 300px;
+    padding: 40px 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: transform 0.6s ease, box-shadow 10s ease;
+    transform-style: preserve-3d;
+    opacity: 0;
+    animation: fadeSlide 1s ease forwards;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(0, 123, 255, 0.1);
+  }
+
+  .kartu:nth-child(1) { animation-delay: 0.2s; }
+  .kartu:nth-child(2) { animation-delay: 0.4s; }
+  .kartu:nth-child(3) { animation-delay: 0.6s; }
+
+  .kartu:hover {
+    transform: rotateY(10deg) rotateX(5deg);
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.25);
+  }
+
+  .kartu h3 {
+    font-weight: 700;
+    color: #007bff;
+    font-size: 22px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+
+  .kartu:hover h3 {
+    color: #0056b3;
+  }
+
+  @keyframes fadeSlide {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 900px) {
+    .kartu {
+      width: 90%;
+    }
+  }
